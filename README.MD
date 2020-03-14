@@ -4,8 +4,8 @@ Using the provided pseudo-code and explanation of a recursive descent parser, im
 
 # Usage
 
-- this program reads in a line of input and returns a success or failure message for each valid line of input
-- the parser will execute when given a valid path to the input file
+- this program reads in a line of input and returns a success or failure message when a file is correctly parsed
+- driver.py, inputUtils.py, and recursiveDescentParser.py must be in the same directory
 - be sure that the input file's last line of content ends in a new line character, otherwise incorrect results may be returned
 
 ## Example
@@ -16,21 +16,15 @@ Using the provided pseudo-code and explanation of a recursive descent parser, im
 User-MacBook-Pro:RDP user$ python3 driver.py
 Enter file name: test.txt
 256 15 400
-success
 166 16 225
-success
 4096
-success
 1073741824
 success
 Do you wish to continue? Enter 'y' or 'n': y
 Enter file name: test2.txt
 1 2 3 4 5
-success
 6 7 8 9 10
-success
 2 4 8 16
-success
 32 64 128 256
 success
 Do you wish to continue? Enter 'y' or 'n': n
