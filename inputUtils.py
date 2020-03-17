@@ -1,29 +1,16 @@
 import os.path
 
-def verifyInputFile():
-    fileHandle = input("Enter file name: ")
-    exists = os.path.isfile(fileHandle)
-    while not exists:
-        fileHandle = input("Invalid file name\nEnter file name: ")
-        exists = os.path.isfile(fileHandle)
-    
-    return fileHandle
+def getUserInput():
+    exists = False
+    readInput = True
+    while not exists and readInput:
+        fileHandle = input("Enter file name or 'q' to exit: ")
 
-def checkToContinue():
-    runProgram = True
-    isValidResposne = False
-
-    while not isValidResposne:
-        response = input("Do you wish to continue? Enter 'y' or 'n': ")
-        
-        if response == "y":
-            isValidResposne = True
-            runProgram = True
-        elif response == "n": 
-            isValidResposne = True
-            runProgram = False
-        else: 
-            isValidResposne = False
-            runProgram = False
+        if fileHandle == 'q':
+            readInput = False
+            return None, readInput
+        else:
+            print("Invalid file name")
+            exists = os.path.isfile(fileHandle)
     
-    return runProgram
+    return fileHandle, readInput
