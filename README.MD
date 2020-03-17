@@ -9,7 +9,7 @@
 - Download the folder titled `src`
 - Navigate into the `src` directory
 - Verify that `driver.py`, `inputUtils.py`, and `recursiveDescentParser.py` exist, as well as the directory, `test_files`.
-- Veify that the directory, `test_files`, contains three files titled, `test.txt`, `test2.txt`, and `test3.txt`. If not the contents of each are listed [below](##Test\ Files). It is important to note that each test file ends with a new line character. `\r\n` or `\n`.
+- Veify that the directory, `test_files`, contains three files titled, `test.txt`, `test2.txt`, and `test3.txt`. If not the contents of each are listed [below](##Test-Files). It is important to note that each test file ends with a new line character. `\r\n` or `\n`.
 
 ## Run
 - `python driver.py` or `python3 driver.py`
