@@ -6,10 +6,11 @@ if __name__ == "__main__":
     runProgram = True
 
     while runProgram:
-        fileName = utils.verifyInputFile()
-        fileHandle = open(fileName, 'r')
+        fileName, runProgram = utils.getUserInput()
+        
+        if runProgram:
 
-        for line in fileHandle:
-            rdp.rdparser(line)
+            fileHandle = open(fileName, 'r')
 
-        runProgram = utils.checkToContinue()
+            for line in fileHandle:
+                rdp.rdparser(line)
