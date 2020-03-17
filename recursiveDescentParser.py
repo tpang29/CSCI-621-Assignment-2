@@ -18,11 +18,6 @@ def resetVariables():
     EOL = False
     succeeded = True
 
-# GET_INP_LINE
-def getInputLine():
-    global userInput
-    userInput = input("Enter input line: ")
-
 # GET_NEXT_SYMBOL
 def getNextSymbol():
     global inputIndex, nextSymbol, userInput, EOL
@@ -97,7 +92,7 @@ def etail(nValue):
 def n(nValue):
     d()
     if succeeded:
-        nValue = nValue * 10 + dValue
+        nValue = (nValue * 10) + dValue
         return ntail(nValue)
 
 # NTAIL
@@ -115,3 +110,9 @@ def d():
         getNextSymbol()
     else:
         succeeded = False
+
+# Part of pseudocode but removed to input utilities module
+# # GET_INP_LINE
+# def getInputLine():
+#     global userInput
+#     userInput = input("Enter input line: ")
