@@ -1,7 +1,7 @@
 import recursiveDescentParser as rdp
 import inputUtils as inp
 
-if __name__=="__main__":
+if __name__ == "__main__":
 
     runProgram = True
 
