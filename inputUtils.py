@@ -4,13 +4,14 @@ def getUserInput():
     exists = False
     readInput = True
     while not exists and readInput:
-        fileHandle = input("Enter file name or 'q' to exit: ")
+        response = input("Enter file name or 'q' to exit: ")
 
-        if fileHandle == 'q':
+        if response == 'q':
             readInput = False
             return None, readInput
         else:
-            print("Invalid file name")
-            exists = os.path.isfile(fileHandle)
+            exists = os.path.isfile(response)
+            if not exists:
+                print("Invalid file name")
     
-    return fileHandle, readInput
+    return response, readInput
